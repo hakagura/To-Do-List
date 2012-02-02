@@ -1,0 +1,6 @@
+<div class="clearfix">
+  <%= f.text_field :description,:placeholder => 'Task Description'%>
+  <%= f.select :status, options_for_select(["Open","Closed"],:selected => f.object.status) %>
+<%= f.link_to_remove "Remove this task",:class => "btn danger small" %>
+</div>
+

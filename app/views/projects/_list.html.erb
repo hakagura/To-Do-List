@@ -1,0 +1,11 @@
+<div class="clearfix">
+  <%= f.text_field :name,:placeholder => 'List Name'%>
+  <%= f.text_field :description,:placeholder => 'List Description' %>
+  <%= f.link_to_remove "Remove this list",:class => "btn danger small" %>
+
+  <%= f.fields_for :tasks do |builder| %>
+    <%= render 'task',:f => builder %>
+  <% end %>
+  <p><%= f.link_to_add "Add a task", :tasks ,:class => "btn small"%></p>
+</div>
+

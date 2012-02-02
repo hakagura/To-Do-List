@@ -1,0 +1,25 @@
+  <div class="top_bottom">
+    <%= link_to 'Back to Projects',projects_path,:class => "btn primary small" %> <%= link_to 'Edit Projects',edit_project_path, :class => "btn warning small" %>
+  </div>
+  <p>
+  <div class="page-header">
+    <h2>Project: <small><strong><%= @project.name %></small></strong></h2>
+  </div>
+<% for list in @project.lists %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><h2>List</h2><%= list.name %><h4><small><%=list.description%></small><h4></th>
+      </tr>
+    </thead>
+    <% for task in list.tasks %>
+    <tbody>
+      <tr>
+        <td><%= task.description %></td>
+        <td><%= task.status %></td>
+        <td><%= link_to 'Encerrar', {:controller => 'projects',:action => 'closed_task',:id => task},:class => 'btn success small' if task.status != 'Closed'%></td>
+      </tr>
+    </tbody>
+  <% end %>
+  </table>
+<% end %>
