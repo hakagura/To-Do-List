@@ -9,4 +9,10 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  before_create :set_role
+
+  def set_role
+    self.role="user"
+  end
 end
