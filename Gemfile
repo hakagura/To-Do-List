@@ -25,6 +25,7 @@ gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem 'devise'
 gem 'rspec-rails','2.8.1'
 gem 'cancan', '1.6.7'
+gem 'heroku'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
