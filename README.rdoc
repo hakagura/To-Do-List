@@ -4,17 +4,10 @@ To Do List is a web-application that includes project with lists end tasks.
 
 == Getting Started
 
-1. Step One
-
-   bundle install
-   bundle exec rake db:create
-   bundle exec rake db:migrate
-
-2. Step Two 
-
-   Go to http://localhost:3000/
-
-3. Step Three 
+  bundle install
+  bundle exec rake db:create
+  bundle exec rake db:migrate
+  Go to http://localhost:3000
   You'll see a login screen
 
 4. Create 
