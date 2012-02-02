@@ -15,7 +15,6 @@ To Do List is a web-application that includes project with lists end tasks.
    Go to http://localhost:3000/
 
 3. Step Three 
- 
   You'll see a login screen
 
 4. Create 
