@@ -1,6 +1,20 @@
 ToDoList::Application.routes.draw do
   devise_for :users
 
+  root :to => 'projects#index'
+
+  resources :projects do
+    get 'closed_task',:on => :collection
+    resources :lists
+    resources :tasks
+  end
+
+  devise_scope :user do
+    get '/login' => 'devise/sessions#new'
+    get '/logout' => 'devise/sessions#destroy'
+  end
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
