@@ -41,10 +41,10 @@ ToDoList::Application.configure do
   config.action_mailer.smtp_settings = {
     :address => "66.228.59.50",
     :port => 25,
-    :domain => ENV["AUCTION_DOMAIN"],
+    :domain => ENV["DOMAIN"],
     :authentication => :login,
-    :user_name => ENV["AUCTION_NAME"],
-    :password => ENV["AUCTION_PASSWORD"]
+    :user_name => ENV["NAME"],
+    :password => ENV["PASSWORD"]
   }
   
 end
