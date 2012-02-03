@@ -25,6 +25,7 @@ gem 'rspec','2.8.0'
 gem 'rspec-rails','2.8.1'
 gem 'cancan', '1.6.7'
 gem 'heroku'
+gem "dynamic_form"
 
 group :development, :test do
   gem 'sqlite3'
