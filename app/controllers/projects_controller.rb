@@ -1,12 +1,14 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
-  load_and_authorize_resource
+  # load_and_authorize_resource
   respond_to :html
 
   def index
+    @projects=Project.all
   end
 
   def show
+    @project=Project.find(params[:id])
   end
 
   def new
@@ -24,6 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project=Project.find(params[:id])
   end
 
   def update
