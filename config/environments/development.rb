@@ -34,4 +34,17 @@ ToDoList::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  #Email SMTP
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.smtp_settings = {
+    :address => "66.228.59.50",
+    :port => 25,
+    :domain => ENV["AUCTION_DOMAIN"],
+    :authentication => :login,
+    :user_name => ENV["AUCTION_NAME"],
+    :password => ENV["AUCTION_PASSWORD"]
+  }
+  
 end
