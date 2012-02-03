@@ -6,21 +6,23 @@
   <div class="top_bottom">
     <%= link_to 'Project', new_project_path, :class => "btn primary large" %>
   </div>
-  <table class="zebra-striped">
-    <tr>
-      <th>Name</th>
-      <th></th>
-    </tr>
-    <%= @projects.each do |project|%>
+  <% if current_user %>
+    <table class="zebra-striped">
       <tr>
-        <td><%= project.name %></td>
-        <td nowrap="nowrap" width="300">
-          <%= link_to 'Show',project, :class => 'btn' %>
-          <%= link_to 'Edit', edit_project_path(project), :class => 'btn'%>
-          <%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger' %>              
-        </td>
+        <th>Name</th>
+        <th></th>
       </tr>
-    <% end%>
-  </table>
+      <%= @projects.each do |project|%>
+        <tr>
+          <td><%= project.name %></td>
+          <td nowrap="nowrap" width="300">
+            <%= link_to 'Show',project, :class => 'btn' %>
+            <%= link_to 'Edit', edit_project_path(project), :class => 'btn'%>
+            <%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger' %>              
+          </td>
+        </tr>
+      <% end%>
+    </table>
+  <% end %>
 <% end%>
 
