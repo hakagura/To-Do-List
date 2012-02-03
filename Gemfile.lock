@@ -160,6 +160,7 @@ DEPENDENCIES
   nested_form!
   pg
   rails (= 3.2.1)
+  rspec (= 2.8.0)
   rspec-rails (= 2.8.1)
   sass-rails (~> 3.2.3)
   sqlite3
