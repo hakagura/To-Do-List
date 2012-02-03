@@ -33,6 +33,11 @@
         color: #404040;
       }
 
+      form .clearfix {
+        margin-bottom: 18px;
+        zoom: 1;
+      }
+
     </style>
 
     <div class="container">
@@ -42,7 +47,7 @@
             <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
               <fieldset>
                 <div class="clearfix">
-                  <div class="input focused">
+                  <div class="input">
                     <%= f.email_field :email,:placeholder => 'E-mail',:class => 'input focused' %>
                   </div>
                 </div>
