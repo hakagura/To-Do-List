@@ -7,5 +7,6 @@ To Do List is a web-application that includes project with lists end tasks.
   bundle install
   bundle exec rake db:create
   bundle exec rake db:migrate
+  Set variables to send e-mail:DOMAIN,NAME,PASSWORD
   Go to http://localhost:3000
   You'll see a login screen
