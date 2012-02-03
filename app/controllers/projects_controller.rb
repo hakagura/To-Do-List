@@ -1,14 +1,12 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
-  # load_and_authorize_resource
+  load_and_authorize_resource
   respond_to :html
 
   def index
-    @projects=Project.all
   end
 
   def show
-    @project=Project.find(params[:id])
   end
 
   def new
@@ -19,14 +17,13 @@ class ProjectsController < ApplicationController
     @project=current_user.projects.build(params[:project])
 
     if @project.save
-      redirect_to projects_url
+      redirect_to projects_url, :notice => '"Successfully created."'
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @project=Project.find(params[:id])
   end
 
   def update
@@ -45,8 +42,8 @@ class ProjectsController < ApplicationController
   end
 
   def closed_task
-    @task=Task.find(params[:id])
+    @task=Task.find(params[:task_id])
     @task.update_attribute(:status,"Closed")
-    redirect_to @task.list.project
+    redirect_to @task.list.project, :notice => "Successfully destroyed."
   end
 end
