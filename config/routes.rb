@@ -4,10 +4,11 @@ ToDoList::Application.routes.draw do
   root :to => 'projects#index'
 
   resources :projects do
-    get 'closed_task',:on => :collection
     resources :lists
     resources :tasks
   end
+ 
+  match 'projects/closed_task/:task_id'=> "projects#closed_task"
 
   devise_scope :user do
     get '/login' => 'devise/sessions#new'

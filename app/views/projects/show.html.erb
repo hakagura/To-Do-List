@@ -17,7 +17,7 @@
       <tr>
         <td><%= task.description %></td>
         <td><%= task.status %></td>
-        <td><%= link_to 'Closed', {:controller => 'projects',:action => 'closed_task',:id => task},:class => 'btn success small' if task.status != 'Closed'%></td>
+        <td><%= link_to 'Closed', {:controller => 'projects',:action => 'closed_task',:task_id => task.id},:class => 'btn success small' if task.status != 'Closed'%></td>
       </tr>
     </tbody>
   <% end %>
