@@ -8,8 +8,7 @@ To Do List is a web-application that includes project with lists end tasks.
   bundle exec rake db:create
   bundle exec rake db:migrate
   bundle exec rake spec:models
-  Set variables to send e-mail in development.rb:DOMAIN,NAME,PASSWORD end ADDRESS
-  OR set variables to SMTP server google in production.rb:GMAIL_USERNAME end GMAIL_PASSWORD
+  Set variables to send e-mail in development.rb or production.rb:DOMAIN,NAME,PASSWORD end ADDRESS
   Go to http://localhost:3000
   You'll see a login screen
 
