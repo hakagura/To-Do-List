@@ -9,7 +9,8 @@ To Do List is a web-application that includes project with lists end tasks.
   bundle exec rake db:migrate
   bundle exec rake spec:models
   Set variables to send e-mail in development.rb or production.rb:DOMAIN,NAME,PASSWORD end ADDRESS
-  OBS:How to create SMTP server: http://mergulhao.info/2009/9/15/criando-um-servidor-smtp-com-postfix-the-simple-way
+  OBS:How to create SMTP server:
+  http://mergulhao.info/2009/9/15/criando-um-servidor-smtp-com-postfix-the-simple-way
   Go to http://localhost:3000
   You'll see a login screen
 
